@@ -1,174 +1,153 @@
 ---
 layout: bootcamp
 root: .
-venue: Field Research Facility
-address: 1261 Duck Road Kitty Hawk, NC 27949-4472
+venue: Institute of Arctic and Alpine Research (INSTAAR), Room 620
+address: 3100 Marine Street, Boulder, CO 80309
 country: United-States
-humandate: August 5-7, 2014
+humandate: Jan 7-9, 2015
 humantime: 8:00 am - 5:00 pm
-startdate: 2014-08-05
-enddate: 2014-08-07
-latlng: 36.192977, -75.761568
+startdate: 2015-01-07
+enddate: 2015-01-09
+latlng: 40.013294, -105.251890
 registration: restricted
 instructor: ["Aron Ahmadia", "Chris Kees"]
 contact: aron@ahmadia.net
 ---
 <!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
+Edit the values in the parameter block above to be appropriate for your bootcamp.
+Please use three-letter month names for the 'humandate' field.
 -->
-
 <h2>General Information</h2>
-
 <p>
-  <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
-  is to help scientists and engineers become more productive
-  by teaching them basic lab skills for computing
-  like program design, version control, data management, and task automation.
-  This three-day hands-on bootcamp will cover basic concepts and tools;
-  participants will be encouraged to help one another
-  and to apply what they have learned to their own research problems.
+<a href="http://software-carpentry.org">Software Carpentry</a>'s mission
+is to help scientists and engineers become more productive
+by teaching them basic lab skills for computing
+like program design, version control, data management, and task automation.
+This three-day hands-on bootcamp will cover basic concepts and tools;
+participants will be encouraged to help one another
+and to apply what they have learned to their own research problems.
 </p>
-
 <!-- This block displays the instructors' names if they are available. -->
 {% if page.instructor %}
 <p>
-  <strong>Instructors:</strong>
-  {{page.instructor | join: ', ' %}}
+<strong>Instructors:</strong>
+{{page.instructor | join: ', ' %}}
 </p>
 {% endif %}
-
 <!--
-    Modify this block to reflect the target audience for your bootcamp.
-    In particular, if it is only open to people from a particular institution,
-    or if specialized prerequisite knowledge is required, please mention that.
+Modify this block to reflect the target audience for your bootcamp.
+In particular, if it is only open to people from a particular institution,
+or if specialized prerequisite knowledge is required, please mention that.
 -->
 <p>
-  <strong>Who:</strong>
-This is an internal training for FRF members.
+<strong>Who:</strong>
+This is an internal training workshop for University of Colorado Boulder graduate students.
 </p>
-
 <!--
-    This block displays the address and links to a map showing directions.
+This block displays the address and links to a map showing directions.
 -->
 {% if page.latlng %}
 <p>
-  <strong>Where:</strong>
-  {{ page.address }}.
-  Get directions with
-  <a href="http://www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="http://maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
+<strong>Where:</strong>
+{{ page.address }}.
+Get directions with
+<a href="http://www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
+or
+<a href="http://maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
 </p>
 {% endif %}
-
 <!--
-    Modify the block below if there are any special requirements.
+Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong>
-  Participants must bring a laptop with a few specific software packages installed
-  (listed below).
+<strong>Requirements:</strong>
+Participants must bring a laptop with a few specific software packages installed
+(listed below).
 </p>
-
 <!--
-    This block automatically inserts a contact email address if one has been specified for the page.
-    If one hasn't, this block inserts the generic contact address for Software Carpentry.
+This block automatically inserts a contact email address if one has been specified for the page.
+If one hasn't, this block inserts the generic contact address for Software Carpentry.
 -->
 <p>
-  <strong>Contact</strong>:
-  Please mail
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-  for more information.
+<strong>Contact</strong>:
+Please mail
+{% if page.contact %}
+<a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+{% else %}
+<a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+{% endif %}
+for more information.
 </p>
-
 <hr/>
-
 <!--
-    Edit this block to show the syllabus and schedule for your bootcamp.
+Edit this block to show the syllabus and schedule for your bootcamp.
 -->
 <h2>Schedule</h2>
-
 <div class="row-fluid">
-  <div class="span4">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>  <td>08:00</td>  <td>Setup Help</a></td> </tr>
-      <tr>  <td>09:00</td>  <td>Introduction and Overview</td> </tr>
-      <tr>  <td>09:30</td>  <td><a href="lessons/jk-shell/tutorial.html">Automating Your Actions</a></td> </tr>
-      <tr>  <td>10:30</td>  <td>Break</td> </tr>
-      <tr>  <td>10:45</td>  <td><a href="lessons/jk-shell/tutorial.html">Functions and Pipelines</a></td> </tr>
-      <tr>  <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr>  <td>13:00</td>  <td><a href="lessons/jk-python/intro.html">Fundamentals of Python</a></td> </tr>
-      <tr>  <td>14:30</td>  <td>Break.</td> </tr>
-      <tr>  <td>14:45</td>  <td><a href="lessons/jk-python/intro.html">Fundamentals of Python</a></td> </tr>
-      <tr>  <td>16:30</td>  <td>Daily Wrap-up</a></td> </tr>
-    </table>
-  </div>
-  <div class="span4">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr>  <td>09:00</td>  <td><a href="intermediate/git/index.html">Introduction to Version Control with Git</a></td> </tr>
-      <tr>  <td>10:30</td>  <td>Break</td> </tr>
-      <tr>  <td>10:45</td>  <td><a href="intermediate/git/index.html">The Git Developer's Workflow</a></td> </tr>
-      <tr>  <td>13:00</td>  <td>Introduction to the IPython Notebook (Jupyter)</td> </tr>
-      <tr>  <td>13:30</td>  <td>Scientific Computing with NumPy and SciPy</td> </tr>
-      <tr>  <td>14:30</td>  <td>Break.</td> </tr>
-      <tr>  <td>14:45</td>  <td>Visualization with Matplotlib</td> </tr>
-      <tr>  <td>15:15</td>  <td>Advanced Jupyter: Widgets</td> </tr>
-      <tr>  <td>16:00</td>  <td>Advanced Jupyter: The SPOD Tools</td> </tr>
-      <tr>  <td>16:30</td>  <td>Daily Wrap-up</a></td> </tr>
-    </table>
-  </div>
-  <div class="span4">
-    <h3>Day 3</h3>
-    <table class="table table-striped">
-      <tr>  <td>09:00</td>  <td><a href="lessons/jk-python/testing.html">Testing in Python</a></td> </tr>
-      <tr>  <td>10:30</td>  <td>Break.</td> </tr>
-      <tr>  <td>10:45</td>  <td>The Scientific Software Engineer's Toolbox: Consoles, IDEs, Notebooks, and when to use them
-      <tr>  <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr>  <td>13:00</td>  <td>Distributed, Continuous Development: Git, GitHub, Slack, and Travis
-      <tr>  <td>14:00</td>  <td>Group Projects
-      <tr>  <td>16:00</td>  <td>Training Wrap-up</td> </tr>
-    </table>
-  </div>
+<div class="span4">
+<h3>Day 1</h3>
+<table class="table table-striped">
+<tr> <td>08:00</td> <td>Setup Help</a></td> </tr>
+<tr> <td>09:00</td> <td>Introduction and Overview</td> </tr>
+<tr> <td>09:30</td> <td><a href="lessons/jk-shell/tutorial.html">Automating Your Actions</a></td> </tr>
+<tr> <td>10:30</td> <td>Break</td> </tr>
+<tr> <td>10:45</td> <td><a href="lessons/jk-shell/tutorial.html">Functions and Pipelines</a></td> </tr>
+<tr> <td>12:00</td> <td>Lunch break</td> </tr>
+<tr> <td>13:00</td> <td><a href="lessons/jk-python/intro.html">Fundamentals of Python</a></td> </tr>
+<tr> <td>14:30</td> <td>Break.</td> </tr>
+<tr> <td>14:45</td> <td><a href="lessons/jk-python/intro.html">Fundamentals of Python</a></td> </tr>
+<tr> <td>16:30</td> <td>Daily Wrap-up</a></td> </tr>
+</table>
 </div>
-
+<div class="span4">
+<h3>Day 2</h3>
+<table class="table table-striped">
+<tr> <td>09:00</td> <td><a href="intermediate/git/index.html">Introduction to Version Control with Git</a></td> </tr>
+<tr> <td>10:30</td> <td>Break</td> </tr>
+<tr> <td>10:45</td> <td><a href="intermediate/git/index.html">The Git Developer's Workflow</a></td> </tr>
+<tr> <td>13:00</td> <td>Introduction to the IPython Notebook (Jupyter)</td> </tr>
+<tr> <td>13:30</td> <td>Scientific Computing with NumPy and SciPy</td> </tr>
+<tr> <td>14:30</td> <td>Break.</td> </tr>
+<tr> <td>14:45</td> <td>Visualization with Matplotlib</td> </tr>
+<tr> <td>15:15</td> <td>Application-oriented Advanced Jupyter</td> </tr>
+<tr> <td>16:00</td> <td>Application-oriented Advanced Jupyter</td> </tr>
+<tr> <td>16:30</td> <td>Daily Wrap-up</a></td> </tr>
+</table>
+</div>
+<div class="span4">
+<h3>Day 3</h3>
+<table class="table table-striped">
+<tr> <td>09:00</td> <td><a href="lessons/jk-python/testing.html">Testing in Python</a></td> </tr>
+<tr> <td>10:30</td> <td>Break.</td> </tr>
+<tr> <td>10:45</td> <td>Project Session I </td></tr>
+<tr> <td>12:00</td> <td>Lunch break</td> </tr>
+<tr> <td>13:00</td> <td>Project Session II </td> </tr>
+<tr> <td>16:00</td> <td>Training Wrap-up</td> </tr>
+</table>
+</div>
+</div>
 <hr/>
-
 <!--
-    Edit the setup instructions in _includes/setup.html to reflect your bootcamp.
-    (In particular, most bootcamps teach either Python or R, not both.)
+Edit the setup instructions in _includes/setup.html to reflect your bootcamp.
+(In particular, most bootcamps teach either Python or R, not both.)
 -->
-
 <h2>Setup</h2>
-
 <p>
-  To participate in this workshop
-  you will need working copies of the software described below.
-  Please make sure to install everything
-  (or at least to download the installers)
-  <em>before</em> the start of your workshop.
+To participate in this workshop
+you will need working copies of the software described below.
+Please make sure to install everything
+(or at least to download the installers)
+<em>before</em> the start of your workshop.
 </p>
-
 {% include setup.html %}
-
-
 <h3>Testing your setup</h3>
-
 <p>To test that your system is configured properly, complete the
 following four steps. If any of these do not succeed, or if you run
 into any other trouble, please email Aron Ahmadia immediately.</p>
-
 <ul>
-	<li>Open a terminal window. On Windows, open Git Bash. On a Mac, go to your Applications folder, Utilities subfolder, and open the application called Terminal. On the Linux virtual machine, double click on the Terminal shortcut on the desktop.</li>
-	<li>Type the word <code>ipython</code> and hit Return. After a few seconds, you should see some text printed on your screen that starts with a line like "Python 2.7.6 | Anaconda 1.9.0". Hit <code>Ctrl-d</code> twice to return to the command line.</li>
-	<li>Type <code>nano --version</code> and hit Return. You should see some text printed on your screen that starts with something like "GNU nano version 2.0.6".</li>
-	<li>Type <code>git --version</code> and hit Return. You should be see something like "git version 1.8.3.4" printed on your screen.</li>
+<li>Open a terminal window. On Windows, open Git Bash. On a Mac, go to your Applications folder, Utilities subfolder, and open the application called Terminal. On the Linux virtual machine, double click on the Terminal shortcut on the desktop.</li>
+<li>Type the word <code>ipython</code> and hit Return. After a few seconds, you should see some text printed on your screen that starts with a line like "Python 2.7.6 | Anaconda 1.9.0". Hit <code>Ctrl-d</code> twice to return to the command line.</li>
+<li>Type <code>nano --version</code> and hit Return. You should see some text printed on your screen that starts with something like "GNU nano version 2.0.6".</li>
+<li>Type <code>git --version</code> and hit Return. You should be see something like "git version 1.8.3.4" printed on your screen.</li>
 </ul>
-
 <hr/>
